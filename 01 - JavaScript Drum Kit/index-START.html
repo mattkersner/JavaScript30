@@ -77,11 +77,15 @@
     if (e.propertyName !== 'transform') {
       return;
     }
+    //otherwise, remove the class playing
     this.classList.remove('playing');
   }
 
+  //listen on each key for a transition end event and then run the removetransition function
   const keys = document.querySelectorAll('.key');
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+  //listen to window for keydown events and play corresponding sound
   window.addEventListener('keydown', playSound );
 
 </script>
