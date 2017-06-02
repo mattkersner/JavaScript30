@@ -21,6 +21,11 @@ const cities = [];
 
 fetch(endpoint)
   .then((blob) => blob.json())
+  //spread operator allows an expression to be expanded in places where
+  //multiple elements/variables/arguments are expected. The spread operator allows the elements of our
+  //array to expand. If we just tried pushing the data into the cities
+  //array it would nest the data array inside the original cities array. With the spread operator
+  //it only inserts the values from that array into the original array
   .then((data) => cities.push(...data));
 
 function findMatches(wordToMatch, cities) {
