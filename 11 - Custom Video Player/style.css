@@ -154,3 +154,13 @@ input[type=range]::-moz-range-thumb {
   background: #ffc600;
   cursor: pointer;
 }
+.fullScreen {
+  flex: .1;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+.fullScreen:focus {
+  outline: none;
+}
