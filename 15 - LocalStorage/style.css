@@ -76,3 +76,23 @@
       outline:0;
       border:1px solid rgba(0,0,0,0.1);
     }
+
+    .additional {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .additional input {
+      display: none;
+    }
+
+    .additional input + label:before {
+      content: '⬜️';
+      margin-right: 10px;
+    }
+
+    .additional #checkAll:checked + label:before {
+      content: '✔';
+    }
