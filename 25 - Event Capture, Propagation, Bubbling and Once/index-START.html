@@ -20,8 +20,8 @@
   *, *:before, *:after { box-sizing: inherit; }
 
   div {
-    width:100%;
-    padding:100px;
+    width: 100%;
+    padding: 100px;
   }
 
   .one {
@@ -29,16 +29,35 @@
   }
 
   .two {
-    background:mistyrose;
+    background: mistyrose;
   }
 
   .three {
-    background:coral;
+    background: coral;
   }
 </style>
 
 <button></button>
 <script>
+
+const divs = document.querySelectorAll('div');
+const button = document.querySelector('button');
+
+function logText(e) {
+  console.log(this.classList.value);
+  // e.stopPropagation(); //stops the bubbling
+}
+
+divs.forEach((div) => div.addEventListener('click', logText, {
+  capture: false,
+  once: true //will listen for a click and then unbind itself, not allowing any more clicks after that
+}));
+
+button.addEventListener('click', () => {
+  console.log('click!!!!');
+}, {
+  once: true
+});
 
 </script>
 </body>
