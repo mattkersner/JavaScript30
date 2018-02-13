@@ -67,3 +67,8 @@ h1 {
 .hole.up .mole {
   top:0;
 }
+
+.start-button {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
